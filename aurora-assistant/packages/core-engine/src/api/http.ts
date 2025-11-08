@@ -8,6 +8,7 @@ import { errorHandler } from './middleware/errorHandler';
 import intentsRouter from './routes/intents';
 import actionsRouter from './routes/actions';
 import recipesRouter from './routes/recipes';
+import sttRouter from './routes/stt';
 import { logger } from '../utils/logger';
 
 export function createHttpServer(): Express {
@@ -26,6 +27,7 @@ export function createHttpServer(): Express {
   app.use('/v1/intents', authMiddleware, intentsRouter);
   app.use('/v1/actions', authMiddleware, actionsRouter);
   app.use('/v1/recipes', authMiddleware, recipesRouter);
+  app.use('/v1/stt', authMiddleware, sttRouter); // NEW: STT control
 
   // Error handling
   app.use(errorHandler);
