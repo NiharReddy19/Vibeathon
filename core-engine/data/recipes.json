@@ -1,0 +1,25 @@
+[
+  {
+    "id": "b05f9f8e-3ae0-473a-bbb0-af48bcbec42b",
+    "name": "test-workflow",
+    "steps": [
+      {
+        "type": "open_app",
+        "params": {
+          "app_name": "notepad"
+        },
+        "requestId": "5aaceeb2-c8f5-4f26-a65a-d59b40d47514"
+      },
+      {
+        "type": "list_windows",
+        "params": {},
+        "requestId": "549de97f-4718-44a9-9deb-363273b71186"
+      }
+    ],
+    "createdAt": 1762585818154,
+    "description": "Created from last 2 actions",
+    "tags": [
+      "auto-generated"
+    ]
+  }
+]
