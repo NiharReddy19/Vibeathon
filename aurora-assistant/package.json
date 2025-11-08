@@ -1,0 +1,16 @@
+{
+  "name": "aurora-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:shared": "cd packages/shared && npm run build -- --watch",
+    "dev:web": "cd apps/web-dashboard && npm run dev",
+    "build:shared": "cd packages/shared && npm run build",
+    "build:web": "cd apps/web-dashboard && npm run build",
+    "dev": "npm run build:shared && npm run dev:web"
+  }
+}

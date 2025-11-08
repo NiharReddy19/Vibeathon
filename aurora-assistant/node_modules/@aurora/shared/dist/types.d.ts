@@ -1,0 +1,56 @@
+export interface TranscriptEvent {
+    id: string;
+    timestamp: number;
+    text: string;
+    partial: boolean;
+}
+export interface IntentDecision {
+    intent: string;
+    confidence: number;
+    slots: Record<string, string>;
+    requiresApproval: boolean;
+    timestamp: number;
+}
+export interface ActionRequest {
+    action: string;
+    params: Record<string, any>;
+    requestId: string;
+    timestamp: number;
+}
+export interface ActionResult {
+    ok: boolean;
+    data?: any;
+    error?: string;
+    code?: number;
+    requestId: string;
+    timestamp: number;
+}
+export interface Recipe {
+    id: string;
+    name: string;
+    description?: string;
+    actions: ActionRequest[];
+    createdAt: number;
+    updatedAt: number;
+}
+export interface RecipeRunResult {
+    recipeId: string;
+    results: ActionResult[];
+    ok: boolean;
+}
+export type WSMessageType = 'stt.partial' | 'stt.final' | 'intent.preview' | 'action.result' | 'heartbeat';
+export interface WSMessage<T = any> {
+    type: WSMessageType;
+    payload: T;
+    timestamp: number;
+}
+export interface APIError {
+    error: string;
+    code: number;
+}
+export interface EngineSettings {
+    port: number;
+    token: string;
+    modelPath: string;
+    autoStart: boolean;
+}

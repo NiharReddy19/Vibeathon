@@ -1,0 +1,25 @@
+// IPC and WebSocket channel names
+export const IPC_CHANNELS = {
+    // Action channels
+    ACTION_RUN: 'action:run',
+    // Recipe channels
+    RECIPE_LIST: 'recipe:list',
+    RECIPE_GET: 'recipe:get',
+    RECIPE_SAVE: 'recipe:save',
+    RECIPE_DELETE: 'recipe:delete',
+    RECIPE_RUN: 'recipe:run',
+    // System channels
+    GET_MIC_STATUS: 'system:mic-status',
+    REQUEST_MIC_PERMISSION: 'system:mic-permission',
+    GET_ENGINE_STATUS: 'system:engine-status',
+    // Settings
+    GET_SETTINGS: 'settings:get',
+    SET_SETTINGS: 'settings:set',
+};
+export const WS_CHANNELS = {
+    STT_PARTIAL: 'stt.partial',
+    STT_FINAL: 'stt.final',
+    INTENT_PREVIEW: 'intent.preview',
+    ACTION_RESULT: 'action.result',
+    HEARTBEAT: 'heartbeat',
+};

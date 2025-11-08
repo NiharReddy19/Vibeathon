@@ -1,0 +1,10 @@
+{
+	"name": "@aurora/electron-app",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"build": "echo \"no build configured\"",
+		"dev": "echo \"no dev configured\""
+	}
+}
