@@ -14,7 +14,13 @@
     "test": "npm run test --workspaces"
   },
   "devDependencies": {
-    "typescript": "^5.2.2",
-    "@types/node": "^20.9.0"
+    "@types/node": "^20.9.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "ws": "^8.18.3"
   }
 }
